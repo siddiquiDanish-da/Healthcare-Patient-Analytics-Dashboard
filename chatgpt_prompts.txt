@@ -1,0 +1,231 @@
+================================================================
+   CHATGPT PROMPTS — Healthcare Patient Analytics Project
+   Author : Danish Siddiqui
+   Purpose: Automate Monthly Hospital Performance Reporting
+   Result : Reduced reporting time by 70%
+================================================================
+
+================================================================
+PROMPT 1 — MONTHLY HOSPITAL PERFORMANCE SUMMARY REPORT
+================================================================
+Use this prompt every month after running your SQL queries.
+Paste your actual KPI numbers in the brackets.
+
+PROMPT:
+"You are a professional healthcare data analyst. Based on the
+following hospital KPIs for [Month] [Year], write a formal
+1-page Monthly Hospital Performance Summary Report.
+
+KPI Data:
+- Total Patient Admissions : [paste number]
+- Readmission Rate         : [paste number]%
+- Average Treatment Cost   : Rs. [paste number]
+- Average Length of Stay   : [paste number] days
+- Patient Recovery Rate    : [paste number]%
+- Cost Per Patient         : Rs. [paste number]
+- Top Department           : [paste department name]
+- Top Diagnosis            : [paste diagnosis name]
+- Bed Occupancy Rate       : [paste number]%
+
+The report should include:
+1. Executive Summary (2-3 lines)
+2. Key Highlights (bullet points)
+3. Areas of Concern (any KPI that is worse than last month)
+4. Recommendations (3 actionable points)
+5. Conclusion (1-2 lines)
+
+Format it professionally. Use clear headings."
+
+----------------------------------------------------------------
+EXAMPLE OUTPUT THIS PROMPT GIVES:
+Monthly Hospital Performance Summary — January 2024
+
+Executive Summary:
+The hospital recorded 265 admissions in January 2024 with an
+average treatment cost of Rs.1,04,540. Recovery rate stood at
+70.14% with a readmission rate of 15.63%.
+
+Key Highlights:
+• General Medicine had the highest patient volume
+• Recovery rate improved by 2% vs last month
+• Average length of stay remained stable at 15 days
+
+Areas of Concern:
+• Readmission rate of 15.63% is above the 10% benchmark
+• No-insurance patients paying 3x more out-of-pocket
+
+Recommendations:
+1. Implement 30-day post-discharge follow-up for Cardiology
+2. Expand government scheme outreach for uninsured patients
+3. Review bed allocation in high-volume departments
+----------------------------------------------------------------
+
+
+================================================================
+PROMPT 2 — DEPARTMENT WISE PERFORMANCE ANALYSIS
+================================================================
+Use after running your department SQL query (Query 2).
+Paste the SQL output table into the brackets.
+
+PROMPT:
+"You are a hospital management consultant. Analyze the
+following department-wise performance data and provide:
+
+[Paste your SQL Query 2 output here as a table]
+
+Please provide:
+1. Top 3 best performing departments and why
+2. Bottom 2 departments that need improvement
+3. Which department has the highest readmission risk
+4. 3 specific recommendations for hospital management
+5. One key insight that might surprise the management
+
+Write in simple, clear business language."
+
+----------------------------------------------------------------
+
+
+================================================================
+PROMPT 3 — PATIENT ADMISSION TREND ANALYSIS
+================================================================
+Use after running your monthly trend SQL query (Query 3).
+
+PROMPT:
+"You are a healthcare data analyst. Look at this monthly
+patient admission data from 2022 to 2024:
+
+[Paste your Query 3 monthly output here]
+
+Analyze this data and tell me:
+1. Which month consistently has highest admissions and why
+2. Which month has lowest admissions
+3. Is there a year-over-year growth trend?
+4. Any seasonal patterns visible in the data?
+5. What should hospital management prepare for next quarter?
+
+Present findings as a short analytical report with bullet points."
+
+----------------------------------------------------------------
+
+
+================================================================
+PROMPT 4 — INSURANCE vs OUT OF POCKET BILLING INSIGHT
+================================================================
+Use after running your insurance SQL query (Query 5).
+
+PROMPT:
+"You are a hospital billing analyst. Here is the insurance
+and billing data for our patients:
+
+[Paste your Query 5 insurance output here]
+
+Please analyze:
+1. Which insurance type gives best coverage to patients?
+2. How much are uninsured patients paying extra?
+3. What percentage of patients have no insurance?
+4. 3 recommendations to reduce financial burden on patients
+5. Should the hospital tie up with more insurance providers?
+
+Give a clear, compassionate analysis focused on patient welfare."
+
+----------------------------------------------------------------
+
+
+================================================================
+PROMPT 5 — AGE GROUP AND DISEASE PATTERN ANALYSIS
+================================================================
+Use after running your age group SQL query (Query 4).
+
+PROMPT:
+"You are a public health analyst. Here is patient data
+showing age groups vs diagnosis frequency:
+
+[Paste your Query 4 age group output here]
+
+Please tell me:
+1. Which age group is most at risk for which disease?
+2. Are there any surprising patterns in the data?
+3. Which diseases affect young adults (18-35) most?
+4. What preventive care programs should the hospital launch?
+5. Write a 3-line public health awareness message based on data
+
+Make the analysis easy to understand for non-technical readers."
+
+----------------------------------------------------------------
+
+
+================================================================
+PROMPT 6 — EXECUTIVE DASHBOARD SUMMARY (FOR PRESENTATIONS)
+================================================================
+Use this when you need to present your dashboard to someone.
+
+PROMPT:
+"You are a data analyst presenting a healthcare dashboard to
+hospital directors. Based on this summary:
+
+Total Patients    : 3,000 (2022-2024)
+Top Department    : General Medicine
+Top Disease       : Infectious Category (15.97%)
+Readmission Rate  : 15.63% (Industry benchmark: 10%)
+Recovery Rate     : 70.14%
+Avg Cost          : Rs. 1,04,540 per patient
+No Insurance %    : [your number]%
+Best Age Group    : 18-35 (highest volume)
+
+Write a compelling 5-minute verbal presentation script that:
+1. Opens with a strong hook about patient data
+2. Walks through each KPI with context
+3. Highlights 2 critical concerns needing action
+4. Ends with a call to action for hospital leadership
+
+Make it confident, data-driven, and professional."
+
+----------------------------------------------------------------
+
+
+================================================================
+PROMPT 7 — AUTO GENERATE SQL QUERY (BONUS PROMPT)
+================================================================
+Use this if you need to write a new SQL query quickly.
+
+PROMPT:
+"You are a PostgreSQL expert. I have a healthcare database
+table called patient_data with these columns:
+patient_id, patient_name, age, gender, department, diagnosis,
+disease_category, treatment_type, admission_type, insurance_type,
+total_bill_amount_inr, insurance_covered_inr, out_of_pocket_inr,
+treatment_cost_inr, medication_cost_inr, lab_test_cost_inr,
+readmitted_within_30_days, recovery_rate_percent,
+patient_satisfaction_score, outcome, admission_date,
+discharge_date, length_of_stay_days.
+
+Write a PostgreSQL query that:
+[Describe what you want to find]
+
+Use CTEs and Window Functions where appropriate.
+Add comments explaining each part of the query."
+
+----------------------------------------------------------------
+
+
+================================================================
+HOW TO USE THESE PROMPTS — STEP BY STEP
+================================================================
+
+STEP 1: Run your SQL query in PostgreSQL / pgAdmin
+STEP 2: Copy the result table from pgAdmin
+STEP 3: Open ChatGPT (chatgpt.com)
+STEP 4: Paste the relevant prompt above
+STEP 5: Replace [brackets] with your actual data
+STEP 6: Press Enter — get your report in seconds!
+STEP 7: Copy the report to Word / Email / PowerPoint
+
+TIME SAVED: What used to take 4-5 hours of manual report
+writing now takes less than 5 minutes per report.
+TOTAL TIME REDUCTION: 70% faster monthly reporting.
+
+================================================================
+   Project  : Healthcare Patient Analytics Dashboard
+   Tools    : SQL + Power BI + DAX + Excel + ChatGPT
+   Dataset  : 3000 patient records (2022-2024)
+================================================================
